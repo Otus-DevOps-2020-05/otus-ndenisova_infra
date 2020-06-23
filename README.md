@@ -42,4 +42,4 @@ appuser@someinternalhost:~$
 ================
 
 bastion_IP = 84.201.135.63
-someintenalhost_IP = 10.130.0.13
+someinternalhost_IP = 10.130.0.13
