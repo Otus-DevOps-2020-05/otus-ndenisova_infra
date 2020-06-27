@@ -1,0 +1,9 @@
+{
+  "service_account_key_file": "/path/to/sak",
+  "folder_id": "yc_folder_id",
+  "image_name": "your-name-{{timestamp}}",
+  "ruby": "/path/to/script/to/install/ruby",
+  "mongo": "/path/to/script/to/install/mongodb",
+  "disk_size_gb": "size of the disk"
+  "build_puma": "/path/to/script/to/build/puma"
+}
