@@ -1,9 +1,10 @@
 {
-  "service_account_key_file": "/path/to/sak",
+  "service_account_key_file": "./key.json.example",
   "folder_id": "yc_folder_id",
   "image_name": "your-name-{{timestamp}}",
-  "ruby": "/path/to/script/to/install/ruby",
-  "mongo": "/path/to/script/to/install/mongodb",
-  "disk_size_gb": "size of the disk"
-  "build_puma": "/path/to/script/to/build/puma"
+  "ruby": "scripts/install_ruby.sh",
+  "mongo": "scripts/install_mongodb.sh",
+  "deploy": "scripts/deploy.sh",
+  "disk_size_gb": "5",
+  "build_puma": "scripts/build_puma.sh"
 }
