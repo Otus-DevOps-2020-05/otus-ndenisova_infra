@@ -1,0 +1,48 @@
+{
+    "builders": [
+        {
+            "type": "yandex",
+            "service_account_key_file": "{{ user `service_account_key_file` }}",
+            "folder_id": "{{ user `folder_id` }}",
+            "source_image_family": "ubuntu-1604-lts",
+            "image_name": "{{ user `image_name` }}",
+            "image_family": "reddit-full",
+            "ssh_username": "ubuntu",
+            "platform_id": "standard-v1",
+            "use_ipv4_nat": true
+        }
+    ],
+
+    "provisioners": [
+        {
+            "type": "shell",
+            "script": "{{ user `ruby` }}",
+            "pause_before": "60s",
+            "execute_command": " {{.Path}}"
+        },
+        {
+            "type": "shell",
+            "script": "{{ user `mongo` }}",
+            "pause_before": "60s",
+            "execute_command": " {{.Path}}"
+        },
+        {
+            "type": "shell",
+            "script": "{{ user `build_puma` }}",
+            "pause_before": "60s",
+            "execute_command": " {{.Path}}"
+        },
+        {
+            "type": "file",
+            "source": "files/puma.service",
+            "destination":"/tmp/puma.service"
+        },
+        {
+            "type": "shell",
+            "inline": "sudo cp /tmp/puma.service /etc/systemd/system/; sudo systemctl start puma; sudo systemctl enable puma",
+            "pause_before": "60s",
+            "execute_command": "{{.Path}}"
+        }
+
+    ]
+}
