@@ -50,3 +50,17 @@ testapp_IP = 130.193.49.24
 testapp_port = 9292
 
 yc compute instance create   --name reddit-app1   --hostname reddit-app1   --memory=4   --create-boot-disk image-folder-id=standard-images,image-family=ubuntu-1604-lts,size=10GB   --network-interface subnet-name=default-ru-central1-a,nat-ip-version=ipv4   --metadata serial-port-enable=1 --metadata-from-file user-data=metadata.yml
+
+
+#DZ terraform-1
+Сделано создание количества инстансов (var.count_int) исходно развернутых из готового packer'ом образа и запущенных на них сервисах puma на 9292 порту и балансировщик для нихна том же 9292.
+
+Outputs:
+
+external_ip_address_app = [
+  "84.201.135.226",
+  "84.201.130.14",
+]
+external_ip_address_lb = [
+  "84.201.128.58",
+]
