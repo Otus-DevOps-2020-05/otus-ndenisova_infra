@@ -9,3 +9,7 @@ variable db_disk_image {
   description = "Disk image for db"
   default = "reddit-base-db"
 }
+
+variable appname {
+  description = "Name for db resource"
+}

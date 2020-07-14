@@ -10,3 +10,7 @@ variable app_disk_image {
   description = "Disk image for reddit app"
   default = "reddit-base-app"
 }
+
+variable appname {
+  description = "Name for app resource"
+}
