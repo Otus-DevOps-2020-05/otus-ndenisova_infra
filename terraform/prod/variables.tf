@@ -1,6 +1,12 @@
 variable cloud_id {
   description = "Cloud"
 }
+variable appname {
+  description = "Name for app"
+}
+variable dbname {
+  description = "Name of db"
+}
 variable folder_id {
   description = "Folder"
 }
