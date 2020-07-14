@@ -31,3 +31,13 @@ variable count_int {
   description = "Num of instances for balancer"
   default     = 1
 }
+
+variable app_disk_image {
+  description = "Disk image for reddit app"
+  default     = "reddit-base-app"
+}
+
+variable db_disk_image {
+  description = "Disk image for db"
+  default     = "reddit-base-db"
+}
