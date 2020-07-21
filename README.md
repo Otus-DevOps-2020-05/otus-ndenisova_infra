@@ -64,3 +64,17 @@ external_ip_address_app = [
 external_ip_address_lb = [
   "84.201.128.58",
 ]
+
+===========================
+DZ ansible-1
+
+При запуске clone.yml, клонируется репозиторий reddit
+в app:/home/ubuntu/reddit
+
+Задание со звездой.
+Сделана возможность работы с динамическим inventory в json формате
+ansible -i dynamic_inventory.py all -m ping
+
+Разница в статическои и динамическом, что hosts это dict или list соотв.
+и в динамическом требуется обязательное наличие all
+и vars для хостов получилось видно только в _meta
