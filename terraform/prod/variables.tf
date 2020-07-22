@@ -1,6 +1,12 @@
 variable cloud_id {
   description = "Cloud"
 }
+variable appname {
+  description = "Name for app"
+}
+variable dbname {
+  description = "Name of db"
+}
 variable folder_id {
   description = "Folder"
 }
@@ -30,4 +36,14 @@ variable private_key_path {
 variable count_int {
   description = "Num of instances for balancer"
   default     = 1
+}
+
+variable app_disk_image {
+  description = "Disk image for reddit app"
+  default     = "reddit-base-app"
+}
+
+variable db_disk_image {
+  description = "Disk image for db"
+  default     = "reddit-base-db"
 }

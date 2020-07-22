@@ -11,7 +11,7 @@ resource "yandex_lb_target_group" "t-group" {
     ]
 
     content {
-      subnet_id = "e9bshq1k8dc0fpl8oqle"
+      subnet_id = var.subnet_id
       address   = target.value.ipaddr
     }
   }
