@@ -2,6 +2,8 @@
   "service_account_key_file": "./key.json.example",
   "folder_id": "yc_folder_id",
   "image_name": "your-name-{{timestamp}}",
+  "image_name_app": "reddit-base-app-ansible",
+  "image_name_db": "reddit-base-db-ansible",
   "ruby": "scripts/install_ruby.sh",
   "mongo": "scripts/install_mongodb.sh",
   "deploy": "scripts/deploy.sh",
