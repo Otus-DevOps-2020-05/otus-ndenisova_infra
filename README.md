@@ -78,3 +78,8 @@ ansible -i dynamic_inventory.py all -m ping
 Разница в статическои и динамическом, что hosts это dict или list соотв.
 и в динамическом требуется обязательное наличие all
 и vars для хостов получилось видно только в _meta
+
+==========================
+DZ ansible-2
+Реализована возможность развертывания mongo и ruby на соотв. packer
+image'ах reddit-base-db-ansible и reddit-base-app-ansible через ansible.
