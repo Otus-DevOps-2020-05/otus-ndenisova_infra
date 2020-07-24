@@ -14,11 +14,9 @@
     ],
 
     "provisioners": [
-        {
-            "type": "shell",
-            "script": "{{ user `ruby` }}",
-            "pause_before": "60s",
-            "execute_command": " {{.Path}}"
-        }
+         {
+             "type": "ansible",
+             "playbook_file": "ansible/packer_app.yml"
+         }
     ]
 }
